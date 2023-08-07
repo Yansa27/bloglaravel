@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\blogPostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('post', [PostController::class, 'index']);
-Route::get('post/create', [PostController::class, 'create']);
-Route::get('post/{id}' , [PostController::class, 'show']);
-Route::post('post', [PostController::class, 'store']);
+Route::get('/post', [blogPostController::class, 'index']);
+// Route::get('post/create', [blogPostController::class, 'create']);
+Route::get('post/{slug}' , [blogPostController::class, 'show']);
+// Route::post('post', [blogPostController::class, 'store']);
 

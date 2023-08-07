@@ -1,8 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
-    <h1>{{$post[1]}}</h1>
-    <p>{{$post[2]}}</p>
-
-   <a href="{{url("post")}}" class="btn btn-primary"> << kembali </a>
+<article>
+    <h2>{{ $post["title"] }}</h2>
+    <h5>{{ $post["author"] }}</h5>
+  
+         {!! $post["body"] !!}
+   
+   </article>
+   <a href="/post" class="btn btn-success">Back</a>
 @endsection
